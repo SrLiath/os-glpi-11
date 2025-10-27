@@ -28,7 +28,7 @@
    @since     2016
    ------------------------------------------------------------------------
  */
-include ('../../../inc/includes.php');
+include (GLPI_ROOT . '/inc/includes.php');
 include ('configOs.php');
 include ('../inc/pdf/fpdf.php');
 include ('../inc/qrcode/vendor/autoload.php');
@@ -105,7 +105,10 @@ function Footer()
 	}
 }
 // QR Code
-$url = $CFG_GLPI['url_base'];
+if (!isset($CFG_GLPI)) {
+    global $CFG_GLPI;
+}
+$url = $CFG_GLPI['url_base'] ?? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
 $url2 = "/front/ticket.form.php?id=".$_GET['id']."";
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\QROptions;
