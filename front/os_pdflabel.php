@@ -33,6 +33,7 @@ include ('configOs.php');
 include ('../inc/pdf/fpdf.php');
 include ('../inc/qrcode/vendor/autoload.php');
 global $DB;
+global $OsId;
 Session::checkLoginUser();
 // font size definition
 $titleSize = 14;

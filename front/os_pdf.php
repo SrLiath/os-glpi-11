@@ -46,6 +46,8 @@ class PDF extends FPDF {
 		global $TelefonePlugin;
 		global $DataOs;
 		global $OsId;
+		global $EntidadeName, $EntidadeCep, $EntidadeEndereco, $EntidadeEmail, $EntidadePhone;
+
 		// Logo
 		$this->Cell(30);
 		$this->Image('../pics/logo_os.png',8,15,45);
