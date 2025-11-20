@@ -67,7 +67,7 @@ echo "<div style='background:#fff; margin:auto; width:60%; border: 1px solid #dd
 echo "<div align='center'>";
 echo "<a href='http://glpi-os.sourceforge.net' target='_blank'>";
 $logo_file = 'logo_os.png';
-$physical_path = GLPI_VAR_DIR . '/_plugins/os/pics/' . $logo_file;
+$physical_path = '../pics/' . $logo_file;
 $web_path  = $CFG_GLPI['root_doc'] . '/plugins/os/front/logo.php';
 
 echo "<div align='center'>";

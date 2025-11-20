@@ -11,7 +11,7 @@ if (!Session::haveRight("config", UPDATE)) {
     exit;
 }
 
-$picsDir = GLPI_VAR_DIR . '/_plugins/os/pics';
+$picsDir = "../pics";
 
 
 if (!is_dir($picsDir)) {
